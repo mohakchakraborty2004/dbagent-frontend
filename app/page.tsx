@@ -16,55 +16,63 @@ export default function DBAgentLanding() {
     {
       icon: <Database className="w-6 h-6" />,
       title: "Automated Schema Generation",
-      description: "Generate database schemas with AI-powered precision"
+      description:
+        "Instantly generate clean, production-ready database schemas using AI with deep project awareness.",
     },
     {
       icon: <Code className="w-6 h-6" />,
       title: "Backend API Creation",
-      description: "Automatically create REST APIs and integrate them"
+      description:
+        "Convert natural-language instructions into fully structured REST APIs that plug directly into your project.",
     },
     {
       icon: <Layers className="w-6 h-6" />,
-      title: "Local Context Storage",
-      description: "Persistent project understanding across queries"
+      title: "Local Context Memory",
+      description:
+        "DB-Agent remembers your folders, patterns, and constraints — giving consistent and context-aware outputs.",
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Dual-Model Strategy",
-      description: "Fast scanning, accurate generation"
-    }
+      title: "Dual-Model Intelligence",
+      description:
+        "Flash-speed scanning with high-precision generation for the perfect balance of speed and accuracy.",
+    },
   ];
 
   const timeline = [
     {
       step: "1",
-      title: "Initialize Project",
-      description: "Run npx dbagent init to set up your project",
-      image: "🚀"
+      title: "Initialize Your Project",
+      description:
+        "Start with a single command. DB-Agent sets up its environment and prepares the workspace instantly.",
+      image: "🚀",
     },
     {
       step: "2",
-      title: "Shallow Scan",
-      description: "Agent scans and stores your Next.js context",
-      image: "🔍"
+      title: "Deep Shallow Scan",
+      description:
+        "The agent scans your files, detects structures, and stores your Next.js context for future queries.",
+      image: "🔍",
     },
     {
       step: "3",
-      title: "Query & Generate",
-      description: "Describe what you need in natural language",
-      image: "💬"
+      title: "Describe What You Need",
+      description:
+        "Ask in simple natural language — migrations, models, schema updates, API routes, anything.",
+      image: "💬",
     },
     {
       step: "4",
-      title: "Auto-Build Backend",
-      description: "Get accurate schemas and APIs instantly",
-      image: "⚡"
-    }
+      title: "DB-Agent Builds It",
+      description:
+        "Get accurate schema designs, queries, and endpoint code instantly generated and ready to use.",
+      image: "⚡",
+    },
   ];
 
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden relative">
-      {/* Animated Background - Cell Division Effect */}
+      {/* Animated Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <svg className="absolute inset-0 w-full h-full">
           <defs>
@@ -78,13 +86,18 @@ export default function DBAgentLanding() {
             </linearGradient>
             <filter id="goo">
               <feGaussianBlur in="SourceGraphic" stdDeviation="40" result="blur" />
-              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+              <feColorMatrix
+                in="blur"
+                mode="matrix"
+                values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                result="goo"
+              />
             </filter>
             <filter id="glow">
-              <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+              <feGaussianBlur stdDeviation="8" result="coloredBlur" />
               <feMerge>
-                <feMergeNode in="coloredBlur"/>
-                <feMergeNode in="SourceGraphic"/>
+                <feMergeNode in="coloredBlur" />
+                <feMergeNode in="SourceGraphic" />
               </feMerge>
             </filter>
           </defs>
@@ -125,7 +138,7 @@ export default function DBAgentLanding() {
               DB-Agent
             </h1>
             <p className="text-xl md:text-2xl text-gray-400 mb-12 font-light">
-              AI-Powered Database & Backend Automation
+              The AI that builds your database, backend, and APIs — exactly the way you describe.
             </p>
 
             {/* Install Command */}
@@ -154,7 +167,7 @@ export default function DBAgentLanding() {
                 >
                   <div className="text-purple-400 mb-3">{feature.icon}</div>
                   <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-gray-400 text-sm">{feature.description}</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -177,11 +190,9 @@ export default function DBAgentLanding() {
                     {item.image}
                   </div>
                   <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="text-xs font-bold text-purple-400">STEP {item.step}</span>
-                    </div>
+                    <span className="text-xs font-bold text-purple-400">STEP {item.step}</span>
                     <h3 className="text-xl font-semibold mb-1">{item.title}</h3>
-                    <p className="text-gray-400 text-sm">{item.description}</p>
+                    <p className="text-gray-400 text-sm leading-relaxed">{item.description}</p>
                   </div>
                 </div>
               ))}
@@ -199,146 +210,78 @@ export default function DBAgentLanding() {
               <div className="p-5 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl">
                 <div className="text-3xl mb-3">⚡</div>
                 <h3 className="text-xl font-semibold mb-2 text-purple-300">Gemini 2.0 Flash</h3>
-                <p className="text-gray-400 text-sm">Fast project scanning and context extraction</p>
+                <p className="text-gray-400 text-sm">
+                  High-speed project scanning, file pattern detection, and context extraction.
+                </p>
               </div>
               <div className="p-5 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl">
                 <div className="text-3xl mb-3">🎯</div>
                 <h3 className="text-xl font-semibold mb-2 text-blue-300">Gemini 2.5 Pro</h3>
-                <p className="text-gray-400 text-sm">Precision code generation with 20K budget</p>
+                <p className="text-gray-400 text-sm">
+                  Expert-level schema modeling and highly accurate backend code generation.
+                </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Footer with Glassmorphism Text */}
+        {/* Footer */}
         <footer className="py-20 px-4 border-t border-white/5 backdrop-blur-md overflow-hidden">
           <div className="relative">
             <h1 className="text-[15vw] md:text-[12vw] font-black text-center leading-none">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-3xl" style={{
-                WebkitTextStroke: '1px rgba(255,255,255,0.1)',
-                textShadow: '0 0 40px rgba(139, 92, 246, 0.3)'
-              }}>
+              <span
+                className="bg-clip-text text-transparent bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-3xl"
+                style={{
+                  WebkitTextStroke: '1px rgba(255,255,255,0.1)',
+                  textShadow: '0 0 40px rgba(139, 92, 246, 0.3)',
+                }}
+              >
                 DBAGENT
               </span>
             </h1>
           </div>
           <p className="text-center text-gray-500 text-sm mt-8">
-            Built for developers who value speed, accuracy, and intelligence
+            Made for developers who value speed, accuracy, and intelligent automation.
           </p>
         </footer>
       </div>
 
+      {/* Animations */}
       <style jsx>{`
         @keyframes blob1move {
-          0%, 100% {
-            transform: translate(0, 0) scale(1);
-            opacity: 1;
-          }
-          25% {
-            transform: translate(-180px, -60px) scale(0.85);
-            opacity: 0.95;
-          }
-          50% {
-            transform: translate(-240px, 0) scale(0.8);
-            opacity: 0.9;
-          }
-          75% {
-            transform: translate(-180px, 60px) scale(0.85);
-            opacity: 0.95;
-          }
+          0%, 100% { transform: translate(0, 0) scale(1); opacity: 1; }
+          25% { transform: translate(-180px, -60px) scale(0.85); opacity: 0.95; }
+          50% { transform: translate(-240px, 0) scale(0.8); opacity: 0.9; }
+          75% { transform: translate(-180px, 60px) scale(0.85); opacity: 0.95; }
         }
         @keyframes blob2move {
-          0%, 100% {
-            transform: translate(0, 0) scale(1);
-            opacity: 1;
-          }
-          25% {
-            transform: translate(180px, 60px) scale(0.85);
-            opacity: 0.95;
-          }
-          50% {
-            transform: translate(240px, 0) scale(0.8);
-            opacity: 0.9;
-          }
-          75% {
-            transform: translate(180px, -60px) scale(0.85);
-            opacity: 0.95;
-          }
+          0%, 100% { transform: translate(0, 0) scale(1); opacity: 1; }
+          25% { transform: translate(180px, 60px) scale(0.85); opacity: 0.95; }
+          50% { transform: translate(240px, 0) scale(0.8); opacity: 0.9; }
+          75% { transform: translate(180px, -60px) scale(0.85); opacity: 0.95; }
         }
         @keyframes blob3move {
-          0% {
-            transform: translate(0, -200px) scale(0.9);
-            opacity: 0.8;
-          }
-          16% {
-            transform: translate(-80px, -150px) scale(0.95);
-            opacity: 0.85;
-          }
-          33% {
-            transform: translate(-150px, -80px) scale(1);
-            opacity: 1;
-          }
-          50% {
-            transform: translate(-180px, 0) scale(0.85);
-            opacity: 0.9;
-          }
-          66% {
-            transform: translate(-150px, 80px) scale(0.9);
-            opacity: 0.85;
-          }
-          83% {
-            transform: translate(-80px, 150px) scale(0.95);
-            opacity: 0.8;
-          }
-          100% {
-            transform: translate(0, -200px) scale(0.9);
-            opacity: 0.8;
-          }
+          0% { transform: translate(0, -200px) scale(0.9); opacity: 0.8; }
+          16% { transform: translate(-80px, -150px) scale(0.95); opacity: 0.85; }
+          33% { transform: translate(-150px, -80px) scale(1); opacity: 1; }
+          50% { transform: translate(-180px, 0) scale(0.85); opacity: 0.9; }
+          66% { transform: translate(-150px, 80px) scale(0.9); opacity: 0.85; }
+          83% { transform: translate(-80px, 150px) scale(0.95); opacity: 0.8; }
+          100% { transform: translate(0, -200px) scale(0.9); opacity: 0.8; }
         }
         @keyframes blob4move {
-          0% {
-            transform: translate(0, 200px) scale(0.9);
-            opacity: 0.8;
-          }
-          16% {
-            transform: translate(80px, 150px) scale(0.95);
-            opacity: 0.85;
-          }
-          33% {
-            transform: translate(150px, 80px) scale(1);
-            opacity: 1;
-          }
-          50% {
-            transform: translate(180px, 0) scale(0.85);
-            opacity: 0.9;
-          }
-          66% {
-            transform: translate(150px, -80px) scale(0.9);
-            opacity: 0.85;
-          }
-          83% {
-            transform: translate(80px, -150px) scale(0.95);
-            opacity: 0.8;
-          }
-          100% {
-            transform: translate(0, 200px) scale(0.9);
-            opacity: 0.8;
-          }
+          0% { transform: translate(0, 200px) scale(0.9); opacity: 0.8; }
+          16% { transform: translate(80px, 150px) scale(0.95); opacity: 0.85; }
+          33% { transform: translate(150px, 80px) scale(1); opacity: 1; }
+          50% { transform: translate(180px, 0) scale(0.85); opacity: 0.9; }
+          66% { transform: translate(150px, -80px) scale(0.9); opacity: 0.85; }
+          83% { transform: translate(80px, -150px) scale(0.95); opacity: 0.8; }
+          100% { transform: translate(0, 200px) scale(0.9); opacity: 0.8; }
         }
-        .blob1 {
-          animation: blob1move 18s ease-in-out infinite;
-        }
-        .blob2 {
-          animation: blob2move 18s ease-in-out infinite;
-        }
-        .blob3 {
-          animation: blob3move 18s ease-in-out infinite;
-          animation-delay: 6s;
-        }
-        .blob4 {
-          animation: blob4move 18s ease-in-out infinite;
-          animation-delay: 12s;
-        }
+        .blob1 { animation: blob1move 18s ease-in-out infinite; }
+        .blob2 { animation: blob2move 18s ease-in-out infinite; }
+        .blob3 { animation: blob3move 18s ease-in-out infinite; animation-delay: 6s; }
+        .blob4 { animation: blob4move 18s ease-in-out infinite; animation-delay: 12s; }
       `}</style>
     </div>
   );
