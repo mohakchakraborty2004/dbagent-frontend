@@ -120,7 +120,7 @@ export default function DBAgentLanding() {
               <span className="text-xl font-semibold">DB-Agent</span>
             </div>
             <a
-              href="https://github.com"
+              href="https://github.com/mohakchakraborty2004/dbagent"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full transition-all text-sm"
@@ -137,7 +137,7 @@ export default function DBAgentLanding() {
             <h1 className="text-7xl md:text-8xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
               DB-Agent
             </h1>
-            <p className="text-xl md:text-2xl text-gray-400 mb-12 font-light">
+            <p className="text-xl md:text-2xl text-white mb-12 font-light">
               The AI that builds your database, backend, and APIs — exactly the way you describe.
             </p>
 
@@ -167,7 +167,7 @@ export default function DBAgentLanding() {
                 >
                   <div className="text-purple-400 mb-3">{feature.icon}</div>
                   <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">{feature.description}</p>
+                  <p className="text-white text-sm leading-relaxed">{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -192,10 +192,88 @@ export default function DBAgentLanding() {
                   <div className="flex-1">
                     <span className="text-xs font-bold text-purple-400">STEP {item.step}</span>
                     <h3 className="text-xl font-semibold mb-1">{item.title}</h3>
-                    <p className="text-gray-400 text-sm leading-relaxed">{item.description}</p>
+                    <p className="text-white text-sm leading-relaxed">{item.description}</p>
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* WHY DB-AGENT SECTION (COMPLETE) */}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+              Why DB-Agent?
+            </h2>
+            <p className="text-white mt-4 leading-relaxed text-sm md:text-base">
+              DB-Agent is built for developers who value correctness and precision. Its primary goal is to
+              generate database schemas and backend API routes with the highest accuracy possible. Unlike
+              typical agents that rely heavily on model memory — risking hallucination when prompts grow
+              too large — DB-Agent maintains a lightweight local context file inside your project
+              directory.
+            </p>
+            <p className="text-white mt-4 leading-relaxed text-sm md:text-base">
+              This local context system enables the agent to persist project-specific understanding (folder
+              layout, naming patterns, configuration snippets) across multiple interactions. By reading and
+              writing a small context store in the project root, DB-Agent avoids depending on ephemeral
+              model state and reduces the chance of context loss — especially for larger projects or long
+              sessions.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-4">
+            <div className="p-5 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl">
+              <h3 className="text-lg font-semibold mb-2 text-purple-300">Correctness-first</h3>
+              <p className="text-white text-sm leading-relaxed">
+                Prioritizes schema and API correctness over cosmetic frontend changes. Shallow scans keep
+                resource usage low while focusing on the core backend structure.
+              </p>
+            </div>
+
+            <div className="p-5 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl">
+              <h3 className="text-lg font-semibold mb-2 text-purple-300">Local Context Memory</h3>
+              <p className="text-white text-sm leading-relaxed">
+                Context is stored locally (project root) so the agent can re-use and update knowledge across
+                queries without overloading the model prompt.
+              </p>
+            </div>
+
+            <div className="p-5 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl">
+              <h3 className="text-lg font-semibold mb-2 text-purple-300">Resource-efficient Scanning</h3>
+              <p className="text-white text-sm leading-relaxed">
+                A shallow scan is the default to save time and compute. A deep-scan mode will be available
+                for end-to-end analysis that includes frontend and build artifacts.
+              </p>
+            </div>
+          </div>
+
+          {/* Engineering Highlight */}
+          <div className="max-w-4xl mx-auto mt-8 p-5 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl">
+            <h3 className="text-xl font-semibold mb-3">Engineering Highlight</h3>
+            <p className="text-white text-sm leading-relaxed">
+              The core innovation is storing context locally in the user's project root rather than relying
+              on the model's internal memory, which can be exhausted. This allows DB-Agent to include
+              relevant project context with each request so the model can focus on generation accuracy.
+              Context files are intentionally small, versionable, and editable by developers.
+            </p>
+          </div>
+
+          {/* Models & Budgets */}
+          <div className="max-w-4xl mx-auto mt-8 grid md:grid-cols-2 gap-4">
+            <div className="p-5 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl">
+              <h3 className="text-lg font-semibold mb-2 text-purple-300">gemini-2.5-flash</h3>
+              <p className="text-white text-sm leading-relaxed">
+                Used for scanning and quick context gathering. Thinking budget: <strong>1024</strong>. Chosen
+                for speed and efficiency when performing shallow scans.
+              </p>
+            </div>
+            <div className="p-5 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl">
+              <h3 className="text-lg font-semibold mb-2 text-blue-300">gemini-2.5-pro</h3>
+              <p className="text-white text-sm leading-relaxed">
+                Used for accurate code and schema generation. Thinking budget: <strong>20,000</strong>.
+                Chosen for correctness and reliability in producing production-ready backend code.
+              </p>
             </div>
           </div>
         </section>
@@ -210,14 +288,14 @@ export default function DBAgentLanding() {
               <div className="p-5 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl">
                 <div className="text-3xl mb-3">⚡</div>
                 <h3 className="text-xl font-semibold mb-2 text-purple-300">Gemini 2.0 Flash</h3>
-                <p className="text-gray-400 text-sm">
+                <p className="text-white text-sm">
                   High-speed project scanning, file pattern detection, and context extraction.
                 </p>
               </div>
               <div className="p-5 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl">
                 <div className="text-3xl mb-3">🎯</div>
                 <h3 className="text-xl font-semibold mb-2 text-blue-300">Gemini 2.5 Pro</h3>
-                <p className="text-gray-400 text-sm">
+                <p className="text-white text-sm">
                   Expert-level schema modeling and highly accurate backend code generation.
                 </p>
               </div>
